@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class EquipSlot : MonoBehaviour
+[Flags]
+[Serializable]
+public enum EquipSlot
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    Null = 0,
+    Head = 1 << 0,
+    Chest = 1 << 1,
+    Legs = 1 << 2,
+    MainHand = 1 << 3,
+    OffHand = 1 << 4,
+    TwoHand = 1 << 5,
+    Accessory = 1 << 6
 }

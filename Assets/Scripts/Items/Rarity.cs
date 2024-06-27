@@ -1,18 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rarity : MonoBehaviour
+[System.Serializable]
+[Flags]
+public enum Rarity
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    Common = 1 << 0,
+    Uncommon = 1 << 1,
+    Rare = 1 << 2,
+    Epic = 1 << 3,
+    Legendary = 1 << 4
 }
